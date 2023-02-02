@@ -1,41 +1,55 @@
-const pizzaToppings= [
-        "pepperoni", 
-        "sausage", 
-        "cheese",  
-        "bacon",  
-        "supreme" 
+const Toppings= [
+    "pepperoni", 
+    "sausage", 
+    "cheese",  
+    "bacon",  
+    "supreme" 
 ];
 
 //greet customer funtion
-function greetCustomer(){
-    console.log(`Welcome to Otto's Pizza. Our available toppings are: ${pizzaToppings}`)
-   
+
+// function pizzaStuff(pizzaToppings){
+
+// };
+// pizzaStuff(Toppings);
+
+
+function greetCustomer(pizzaToppings) {
+    console.log(`Welcome to Ottos Pizza, our toppings are:`);
+    for (let i = 0; i < pizzaToppings.length; i++) {
+        console.log(pizzaToppings[i]);
+    }
+};
+greetCustomer(Toppings);
+
+
+
+function getPizzaOrder(size, crust, ...moreToppings) {
+    console.log(`One ${size} ${crust} crust pizza with ${moreToppings} coming up! `);
+    return [size, crust, ...moreToppings];
 }
-//invoking the function 
-//greetCustomer();
+getPizzaOrder("large", "thin", Toppings);
 
 
-function getPizzaOrder(size = ["small", "medium", "large"], crust = ["thin", "stuffed", "pan"], ...pizzaToppings){
-    console.log(`One ${size[0]} ${crust [0]} crust pizza with pepperoni coming up! `);
-    console.log(`sizes= ${size}, crust =${crust} pizza toppings= ${pizzaToppings}`);
 
+function preparePizza(aPizza){
+    console.log(`Cooking pizza`)
+return {
+    size: aPizza[0],
+    crust: aPizza[1],
+    toppings: aPizza[2]
 }
-
-
-function preparePizza(size = ["small", "medium", "large"], crust = ["thin", "stuffed", "pan"], toppings = ["pepperoni", "sausage", "bacon", "cheese"]){
-    
-console.log(`Cooking a ${size[1]}, ${crust[1]} pizza with ${toppings[2]}.`)
-console.log(pizzaObj = {size, crust, toppings});
 }
-
-
+console.log(preparePizza(getPizzaOrder("large", "thin", Toppings)))
 
 function servePizza(pizzaObj){
-console.log(`Here is your ${size[1]} ${crust[1]} crust ${toppings[2]} pizza!}`);
-console.log(`${pizzaObj}`);
-};
+console.log(`Here is you ${pizzaObj.size} ${pizzaObj.crust} crust pizza with ${pizzaObj.toppings}`);
+}; 
+
+servePizza(preparePizza(getPizzaOrder("large", "thin", Toppings)));
+
+// getPizzaOrder();
+// preparePizza();
+// servePizza();
 
 
-getPizzaOrder();
-preparePizza();
-servePizza();
