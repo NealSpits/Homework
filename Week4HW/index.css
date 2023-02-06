@@ -1,0 +1,13 @@
+:root{
+color-scheme: dark;
+}
+
+.list1 {
+padding-top: 0.5em;
+color: chartreuse;
+}
+
+#picofme {
+    margin-top: 10px;
+    border: thick double;
+}
