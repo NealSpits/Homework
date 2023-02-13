@@ -1,0 +1,57 @@
+html {
+    background-color: antiquewhite;
+  }
+  
+  body {
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  h1 {
+    font-size: 50px;
+  }
+  
+  img {
+    height: 100%;
+    display: flexbox;
+  }
+
+  #hoganpic {
+    width: 80%;
+    }
+
+.picsofAndre{
+    width: 80%;
+}
+  
+  div {
+    border: 2px solid burlywood;
+    margin: 10px;
+  }
+
+  
+  #introPic {
+    display: flexbox;
+    
+  }
+  
+  #bio {
+    display: flexbox;
+    
+  }
+  #bio > li {
+    padding: 2px;
+  }
+  
+  #pro {
+    width: auto;
+  }
+
+  @media(max-width: 550px) {
+    .picsofAndre {
+     width: 100%;
+     
+    }
+   
+}
+
